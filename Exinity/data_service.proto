@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package data;
+
+// The message representing data
+message DataMessage {
+    string id = 1;
+    double value = 2;
+}
+
+// The service for sending DataMessages
+service DataService {
+    rpc SendData(DataMessage) returns (Empty);
+}
+
+// A message for empty responses
+message Empty {}
